@@ -1,0 +1,15 @@
+C:\Users\Nortrom\source\repos\MechArena\MechArena\bin\Debug\net6.0\MechArena.exe
+C:\Users\Nortrom\source\repos\MechArena\MechArena\bin\Debug\net6.0\MechArena.deps.json
+C:\Users\Nortrom\source\repos\MechArena\MechArena\bin\Debug\net6.0\MechArena.runtimeconfig.json
+C:\Users\Nortrom\source\repos\MechArena\MechArena\bin\Debug\net6.0\MechArena.dll
+C:\Users\Nortrom\source\repos\MechArena\MechArena\bin\Debug\net6.0\MechArena.pdb
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\MechArena.csproj.AssemblyReference.cache
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\MechArena.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\MechArena.AssemblyInfoInputs.cache
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\MechArena.AssemblyInfo.cs
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\MechArena.csproj.CoreCompileInputs.cache
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\MechArena.dll
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\refint\MechArena.dll
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\MechArena.pdb
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\MechArena.genruntimeconfig.cache
+C:\Users\Nortrom\source\repos\MechArena\MechArena\obj\Debug\net6.0\ref\MechArena.dll

@@ -1,0 +1,15 @@
+G:\DivisionByZero\bin\Debug\net6.0\Exceptions.exe
+G:\DivisionByZero\bin\Debug\net6.0\Exceptions.deps.json
+G:\DivisionByZero\bin\Debug\net6.0\Exceptions.runtimeconfig.json
+G:\DivisionByZero\bin\Debug\net6.0\Exceptions.dll
+G:\DivisionByZero\bin\Debug\net6.0\Exceptions.pdb
+G:\DivisionByZero\obj\Debug\net6.0\Exceptions.csproj.AssemblyReference.cache
+G:\DivisionByZero\obj\Debug\net6.0\Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+G:\DivisionByZero\obj\Debug\net6.0\Exceptions.AssemblyInfoInputs.cache
+G:\DivisionByZero\obj\Debug\net6.0\Exceptions.AssemblyInfo.cs
+G:\DivisionByZero\obj\Debug\net6.0\Exceptions.csproj.CoreCompileInputs.cache
+G:\DivisionByZero\obj\Debug\net6.0\Exceptions.dll
+G:\DivisionByZero\obj\Debug\net6.0\refint\Exceptions.dll
+G:\DivisionByZero\obj\Debug\net6.0\Exceptions.pdb
+G:\DivisionByZero\obj\Debug\net6.0\Exceptions.genruntimeconfig.cache
+G:\DivisionByZero\obj\Debug\net6.0\ref\Exceptions.dll

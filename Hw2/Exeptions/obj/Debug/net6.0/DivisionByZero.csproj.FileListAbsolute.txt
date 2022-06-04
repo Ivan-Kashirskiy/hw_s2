@@ -1,0 +1,30 @@
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\bin\Debug\net6.0\DivisionByZero.exe
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\bin\Debug\net6.0\DivisionByZero.deps.json
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\bin\Debug\net6.0\DivisionByZero.runtimeconfig.json
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\bin\Debug\net6.0\DivisionByZero.dll
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\bin\Debug\net6.0\DivisionByZero.pdb
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\DivisionByZero.csproj.AssemblyReference.cache
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\DivisionByZero.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\DivisionByZero.AssemblyInfoInputs.cache
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\DivisionByZero.AssemblyInfo.cs
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\DivisionByZero.csproj.CoreCompileInputs.cache
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\DivisionByZero.dll
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\refint\DivisionByZero.dll
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\DivisionByZero.pdb
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\DivisionByZero.genruntimeconfig.cache
+C:\Users\kashi\OneDrive\Рабочий стол\Task2\DivisionByZero\obj\Debug\net6.0\ref\DivisionByZero.dll
+G:\DivisionByZero\bin\Debug\net6.0\DivisionByZero.exe
+G:\DivisionByZero\bin\Debug\net6.0\DivisionByZero.deps.json
+G:\DivisionByZero\bin\Debug\net6.0\DivisionByZero.runtimeconfig.json
+G:\DivisionByZero\bin\Debug\net6.0\DivisionByZero.dll
+G:\DivisionByZero\bin\Debug\net6.0\DivisionByZero.pdb
+G:\DivisionByZero\obj\Debug\net6.0\DivisionByZero.csproj.AssemblyReference.cache
+G:\DivisionByZero\obj\Debug\net6.0\DivisionByZero.GeneratedMSBuildEditorConfig.editorconfig
+G:\DivisionByZero\obj\Debug\net6.0\DivisionByZero.AssemblyInfoInputs.cache
+G:\DivisionByZero\obj\Debug\net6.0\DivisionByZero.AssemblyInfo.cs
+G:\DivisionByZero\obj\Debug\net6.0\DivisionByZero.csproj.CoreCompileInputs.cache
+G:\DivisionByZero\obj\Debug\net6.0\DivisionByZero.dll
+G:\DivisionByZero\obj\Debug\net6.0\refint\DivisionByZero.dll
+G:\DivisionByZero\obj\Debug\net6.0\DivisionByZero.pdb
+G:\DivisionByZero\obj\Debug\net6.0\DivisionByZero.genruntimeconfig.cache
+G:\DivisionByZero\obj\Debug\net6.0\ref\DivisionByZero.dll

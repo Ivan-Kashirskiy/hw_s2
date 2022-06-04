@@ -1,0 +1,16 @@
+C:\Users\kashi\source\repos\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+C:\Users\kashi\source\repos\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+C:\Users\kashi\source\repos\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+C:\Users\kashi\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.AssemblyReference.cache
+C:\Users\kashi\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.SuggestedBindingRedirects.cache
+C:\Users\kashi\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+C:\Users\kashi\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+C:\Users\kashi\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
+G:\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+G:\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+G:\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+G:\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.AssemblyReference.cache
+G:\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.SuggestedBindingRedirects.cache
+G:\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+G:\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+G:\ConsoleApp3\obj\Debug\ConsoleApp3.pdb

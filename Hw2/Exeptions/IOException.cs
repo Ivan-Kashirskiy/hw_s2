@@ -6,33 +6,25 @@ using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    static class IOException
+    public static class IOException
     {
-        public static void DoIOException()
+        public static int getFileSize(string path)
         {
-            char[] letters = new char[1000];
-            for (int i = 0; i < letters.Length; i++)
-                letters[i] = '0';
-
-            string path = new string(letters); ;
-            using (FileStream fs = File.Open(path, FileMode.Open, FileAccess.Write, FileShare.None)) ;
-
+            int length = (int)new System.IO.FileInfo(path).Length;
+            return length;
         }
 
-        public static void DoIOExceptionFixed()
+        public static int getFileSizeFixed(string path)
         {
             try
             {
-                char[] letters = new char[1000];
-                for (int i = 0; i < letters.Length; i++)
-                    letters[i] = '0';
-
-                string path = new string(letters); ;
-                using (FileStream fs = File.Open(path, FileMode.Open, FileAccess.Write, FileShare.None)) ;
+                int length = (int)new System.IO.FileInfo(path).Length;
+                return length;
             }
             catch (System.IO.IOException e)
             {
                 Console.WriteLine(e);
+                return default;
             }
         }
     }

@@ -6,27 +6,32 @@ using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    static class OutOfMemory
+    public static class OutOfMemory
     {
-        public static void DoOutOfMemory()
+        public static double[][] makeArray(int x, int y)
         {
-            double[][] arr = new double[10000000][];
+            double[][] arr = new double[x][];
             for (int i = 0; i < arr.Length; i++)
-                arr[i] = new double[1000000000];
+                arr[i] = new double[y];
+
+            return arr;
         }
 
-        public static void DoOutOfMemoryFixed()
+        public static double[][] makeArrayFixed(int x, int y)
         {
             try
             {
-                double[][] arr = new double[10000000][];
+                double[][] arr = new double[x][];
                 for (int i = 0; i < arr.Length; i++)
-                    arr[i] = new double[100000000];
+                    arr[i] = new double[y];
+
+                return arr;
             }
             catch (System.OutOfMemoryException e)
             {
 
-                Console.WriteLine(e);              
+                Console.WriteLine(e);
+                return default;
             }
         }
     }

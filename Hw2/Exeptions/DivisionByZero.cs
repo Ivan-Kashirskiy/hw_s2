@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    static class DivisionByZero
+    public static class DivisionByZero
     {
         public static int divide(int a, int b)
         {

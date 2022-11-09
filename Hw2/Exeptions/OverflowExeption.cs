@@ -7,32 +7,35 @@ using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    static class Overflow
+    public static class Overflow
     {
-        public static void DoOverflow()
+        public static int pow(int a, int b)
         {
             checked
             {
                 int c = 1; ;
-                for (int i = 0; i < 100000000; i++)
-                    c = c * 1000000001;
+                for (int i = 0; i < b; i++)
+                    c = c * a;
+                return c;
             }
         }
 
-        public static void DoOverflowFixed()
+        public static int powFixed(int a, int b)
         {
             try
             {
                 checked
                 {
-                    int c = 1;
-                    for (int i = 0; i < 100000; i++)
-                        c *= 1000000;
+                    int c = 1; ;
+                    for (int i = 0; i < b; i++)
+                        c = c * a;
+                    return c;
                 }
             }
             catch (System.OverflowException e)
             {
                 Console.WriteLine(e);
+                return default;
             }
         }
     }

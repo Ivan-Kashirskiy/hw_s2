@@ -6,24 +6,25 @@ using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    static class FileNotFound
+    public static class FileNotFound
     {
-        public static void DoFileNotFound()
-        {      
-            string path = "#$@"; 
-            using (FileStream fs = File.Open(path, FileMode.Open, FileAccess.Write, FileShare.None));
+        public static int getFileSize(string path)
+        {
+            int length = (int)new System.IO.FileInfo(path).Length;
+            return length;
         }
 
-        public static void DoFileNotFoundFixed()
+        public static int getFileSizeFixed(string path)
         {
             try
             {
-                string path = "#$@";
-                using (FileStream fs = File.Open(path, FileMode.Open, FileAccess.Write, FileShare.None)) ;
+                int length = (int)new System.IO.FileInfo(path).Length;
+                return length;
             }
             catch (System.IO.FileNotFoundException e)
             {
                 Console.WriteLine(e);
+                return default;
             }
         }
     }

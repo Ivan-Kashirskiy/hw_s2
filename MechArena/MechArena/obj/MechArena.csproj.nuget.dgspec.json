@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nortrom\\source\\repos\\MechArena\\MechArena\\MechArena.csproj": {}
+    "F:\\hw\\MechArena\\MechArena\\MechArena.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nortrom\\source\\repos\\MechArena\\MechArena\\MechArena.csproj": {
+    "F:\\hw\\MechArena\\MechArena\\MechArena.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nortrom\\source\\repos\\MechArena\\MechArena\\MechArena.csproj",
+        "projectUniqueName": "F:\\hw\\MechArena\\MechArena\\MechArena.csproj",
         "projectName": "MechArena",
-        "projectPath": "C:\\Users\\Nortrom\\source\\repos\\MechArena\\MechArena\\MechArena.csproj",
-        "packagesPath": "C:\\Users\\Nortrom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nortrom\\source\\repos\\MechArena\\MechArena\\obj\\",
+        "projectPath": "F:\\hw\\MechArena\\MechArena\\MechArena.csproj",
+        "packagesPath": "C:\\Users\\kashi\\.nuget\\packages\\",
+        "outputPath": "F:\\hw\\MechArena\\MechArena\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Nortrom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kashi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,7 +49,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -54,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

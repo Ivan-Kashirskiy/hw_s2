@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    static class IndexOutOfRange
+    public static class IndexOutOfRange
     {
-        public static void DoIndexOutOfRange()
-        {
-            int[] arr = new int[] { 1, 2 };
-            int c = arr[2];
+        public static int getIndex(int[] arr, int index)
+        {    
+            return arr[index];
         }
 
-        public static void DoIndexOutOfRangeFixed()
+        public static int getIndexFixed(int[] arr, int index)
         {
             try
             {
-                int[] arr = new int[] { 1, 2 };
-                int c = arr[2];
+                return arr[index];
             }
             catch (System.IndexOutOfRangeException e)
             {
 
-                Console.WriteLine(e);               
+                Console.WriteLine(e);
+                return default;
             }
         }
 

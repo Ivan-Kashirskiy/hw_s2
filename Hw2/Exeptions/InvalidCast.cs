@@ -7,24 +7,23 @@ using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    static class InvalidCast
+    public static class InvalidCast
     {
-        public static void DoInvalidCast()
-        {
-            object value = 12;         
-            string s = (string)value;
+        public static char getFirstChar(object value)
+        {                 
+            return ((string)value)[0];
         }
 
-        public static void DoInvalidCastFixed()
+        public static char getFirstCharFixed(object value)
         {
             try
             {
-                object value = 12;
-                string s = (string)value;
+                return ((string)value)[0];
             }
             catch (System.InvalidCastException e)
             {
-                Console.WriteLine(e);               
+                Console.WriteLine(e);
+                return default;
             }
         }
 

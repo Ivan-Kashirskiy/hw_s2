@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    internal class NullReference
+    public class NullReference
     { 
-        public static void DoNullReference()
-        {
-            int[] nl = null;
-            int i = nl.Length;
+        public static int getArrLength(int[] arr)
+        {           
+            return arr.Length;
         }
 
 
-        public static void DoNullReferenceFixed()
+        public static int getArrLengthFixed(int[] arr)
         {
             try
             {
-                int[] nl = null;
-                int i = nl.Length;
+                return arr.Length;   
             }
             catch (System.NullReferenceException e)
             {
                 Console.WriteLine(e);
+                return default;
             }
 
         }

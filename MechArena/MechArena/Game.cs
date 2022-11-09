@@ -70,6 +70,7 @@ namespace GameMode
 
             Console.WriteLine("Player 2, Enter Your name");
             player[1].setName(Console.ReadLine());
+
             buildMechs(player[1]);
 
             int num1 = player[0].playerMech.Count();

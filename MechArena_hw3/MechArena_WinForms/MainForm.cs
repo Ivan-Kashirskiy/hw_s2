@@ -1,8 +1,10 @@
+using GameMode;
+
 namespace MechArena_WinForms
 {
-    public partial class MainForm : Form
+    public partial class MainForm1 : Form
     {
-        public MainForm()
+        public MainForm1()
         {
             InitializeComponent();
             
@@ -23,18 +25,14 @@ namespace MechArena_WinForms
         private void button1_Click(object sender, EventArgs e)
         {
 
-            //Program.game1.getPlayer(0).setName( textBox1.Text );
-           // Program.game1.getPlayer(1).setName( textBox2.Text );
-
-           // ApplicationConfiguration.Initialize();
-           // Application.Run(new MechCreation());
         }
 
         public void showControlNameSelection()
         {
             nameSelectionUserControl1.Show();
             mechBuildingUserControl1.Hide();
-            battleUserControl1.Hide();
+            battleUserControl2.Hide();
+            finalScreen1.Hide();
         }
 
 
@@ -44,7 +42,8 @@ namespace MechArena_WinForms
             {
                 nameSelectionUserControl1.Hide();
                 mechBuildingUserControl1.Show();
-                battleUserControl1.Hide();
+                battleUserControl2.Hide();
+                finalScreen1.Hide();
             }
         }
 
@@ -52,7 +51,18 @@ namespace MechArena_WinForms
         {
                 nameSelectionUserControl1.Hide();
                 mechBuildingUserControl1.Hide();
-                battleUserControl1.Show();
+                battleUserControl2.Show();
+                finalScreen1.Hide();
+        }
+
+        public string winerName;
+
+        public void showFinalSrceen()
+        {
+            nameSelectionUserControl1.Hide();
+            mechBuildingUserControl1.Hide();
+            battleUserControl2.Hide();
+            finalScreen1.Show();
         }
 
         public void selectNames(string name1, string name2)
@@ -67,13 +77,19 @@ namespace MechArena_WinForms
         public void battleBegin()
         {
             showControlBattle();
-            battleUserControl1.startBattle();
+            battleUserControl2.startBattle();
         }
 
         private void NameSelection_Load(object sender, EventArgs e)
         {
             //nameSelectionUserControl.Show();
             //mechBuildingUserControl.Hide();
+        }
+
+        public void GameWon()
+        {
+            finalScreen1.setWinerName(winerName); 
+            showFinalSrceen();
         }
 
         private void nameSelectionUserControl_Load(object sender, EventArgs e)

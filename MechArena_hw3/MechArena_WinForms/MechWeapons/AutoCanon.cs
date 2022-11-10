@@ -15,7 +15,7 @@ namespace Mech
             damage = 120;
             armorPenetration = 3;
             distance = 12;
-            //pointCost = 6;
+            name = "AutoCanon";
         }
 
         internal static int GetPointCost()

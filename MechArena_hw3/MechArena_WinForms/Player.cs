@@ -57,12 +57,12 @@ namespace GameMode
 
         public void scan(Player enemyPlayer)
         {
-            visibleMech = new List<Mech.Mech>(0);
-            detectedMech = new List<Mech.Mech>(0);
+            visibleMech.Clear(); //= new List<Mech.Mech>(0);
+            detectedMech.Clear();// = new List<Mech.Mech>(0);
 
-            foreach (Mech.Mech mech in playerMech)
-            {           
-                mech.scan(enemyPlayer.playerMech, visibleMech, detectedMech);
+            for (int i = 0; i < playerMech.Count(); i++)
+            {
+                playerMech[i].scan(enemyPlayer.playerMech, visibleMech, detectedMech);
             }
 
         }
@@ -128,62 +128,15 @@ namespace GameMode
 
         } 
 
+        public void refreshMovePoints()
+        {           
+            for (int i = 0; i < playerMech.Count(); i++)
+                playerMech[i].refreshMovePoints();
+        }
 
         public void makeTurn(Field grid, Player enemyPlayer)
         {
             scan(enemyPlayer);
-            printField(grid);
-
-        selectMech:
-            Console.WriteLine("Select mech");
-            prinrMech();
-           
-            int input = Convert.ToInt32(Console.ReadLine());
-
-            Mech.Mech selectedMech;
-            if ((input >= 0) && (input < playerMech.Count()))
-            {
-               selectedMech = playerMech[input];
-            }
-            else
-            {
-                Console.WriteLine("Mech is not selected");
-                goto selectMech;
-            }
-            bool mechFound = true;
-
-            if (mechFound)
-            {
-                Console.WriteLine("Mech selected");
-
-                moveMech:
-                Console.WriteLine("Print coordinates X to move mech");
-                int yToMove = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Print coordinates Y to move mech");
-                int xToMove = Convert.ToInt32(Console.ReadLine());
-
-                bool moved = selectedMech.move(xToMove, yToMove, grid, selectedMech.getMovePoints());
-
-                if (moved)
-                {
-                    scan(enemyPlayer);
-                    printField(grid);
-                    Console.WriteLine("Press button to end turn");
-                    Console.ReadLine();
-                }
-                else
-                {
-                    Console.WriteLine("Cant move there");
-                    goto moveMech;
-                }
-            }
-            else 
-            {
-                Console.WriteLine("No mech found");
-                goto selectMech;          
-            }
-
-
         }
 
 

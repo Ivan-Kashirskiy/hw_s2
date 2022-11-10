@@ -53,8 +53,7 @@
             this.MechPointsLeft.Name = "MechPointsLeft";
             this.MechPointsLeft.Size = new System.Drawing.Size(19, 21);
             this.MechPointsLeft.TabIndex = 21;
-            this.MechPointsLeft.Text = "0";
-            this.MechPointsLeft.Click += new System.EventHandler(this.MechPointsLeft_Click);
+            this.MechPointsLeft.Text = "0";           
             // 
             // label2
             // 

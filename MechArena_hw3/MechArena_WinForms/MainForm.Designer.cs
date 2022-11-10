@@ -1,6 +1,6 @@
 ﻿namespace MechArena_WinForms
 {
-    partial class MainForm
+    partial class MainForm1
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm1));
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.battleUserControl1 = new MechArena_WinForms.BattleUserControl();
+            this.battleUserControl2 = new MechArena_WinForms.BattleUserControl();
+            this.finalScreen1 = new MechArena_WinForms.FinalScreen();
             this.mechBuildingUserControl1 = new MechArena_WinForms.MechBuildingUserControl();
             this.nameSelectionUserControl1 = new MechArena_WinForms.NameSelectionUserControl();
             this.MainPanel.SuspendLayout();
@@ -39,21 +40,32 @@
             // MainPanel
             // 
             this.MainPanel.AutoSize = true;
-            this.MainPanel.Controls.Add(this.battleUserControl1);
+            this.MainPanel.Controls.Add(this.battleUserControl2);
+            this.MainPanel.Controls.Add(this.finalScreen1);
             this.MainPanel.Controls.Add(this.mechBuildingUserControl1);
             this.MainPanel.Controls.Add(this.nameSelectionUserControl1);
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(884, 497);
+            this.MainPanel.Size = new System.Drawing.Size(867, 483);
             this.MainPanel.TabIndex = 0;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
-            // battleUserControl1
+            // battleUserControl2
             // 
-            this.battleUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.battleUserControl1.Name = "battleUserControl1";
-            this.battleUserControl1.Size = new System.Drawing.Size(864, 480);
-            this.battleUserControl1.TabIndex = 2;
+            this.battleUserControl2.Location = new System.Drawing.Point(0, 0);
+            this.battleUserControl2.Name = "battleUserControl2";
+            this.battleUserControl2.Size = new System.Drawing.Size(864, 480);
+            this.battleUserControl2.TabIndex = 3;
+            // 
+            // finalScreen1
+            // 
+            this.finalScreen1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("finalScreen1.BackgroundImage")));
+            this.finalScreen1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.finalScreen1.Location = new System.Drawing.Point(0, 0);
+            this.finalScreen1.Name = "finalScreen1";
+            this.finalScreen1.Size = new System.Drawing.Size(864, 480);
+            this.finalScreen1.TabIndex = 2;
             // 
             // mechBuildingUserControl1
             // 
@@ -73,16 +85,15 @@
             this.nameSelectionUserControl1.Size = new System.Drawing.Size(864, 480);
             this.nameSelectionUserControl1.TabIndex = 0;
             // 
-            // MainForm
+            // MainForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(862, 482);
             this.Controls.Add(this.MainPanel);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1000, 700);
-            this.Name = "MainForm";
+            this.MaximumSize = new System.Drawing.Size(878, 521);
+            this.Name = "MainForm1";
             this.Text = "Mech Arena";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
@@ -100,5 +111,7 @@
         private NameSelectionUserControl nameSelectionUserControl1;
         private MechBuildingUserControl mechBuildingUserControl1;
         private BattleUserControl battleUserControl1;
+        private FinalScreen finalScreen1;
+        private BattleUserControl battleUserControl2;
     }
 }

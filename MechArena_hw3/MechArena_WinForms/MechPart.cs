@@ -8,15 +8,11 @@ namespace Mech
 {
     internal class MechPart
     {
-        //static internal int pointCost;
-       // static public int GetPointCost()
-       // {
-         //   return pointCost;
-       // }
+        protected string name;
 
-       // public int GetPointCost()
-        //{
-        //    return pointCost;
-       // }
+        public string getName()
+        {
+            return name;
+        }
     }
 }

@@ -12,8 +12,8 @@ namespace Mech
         public MechBodyMedium()
         {
             armor = 3;
-            maxHull = 400;
-            pointCost = 7;
+            maxHull = 400;          
+            name = "Medium armor";
         }
 
         internal static int GetPointCost()

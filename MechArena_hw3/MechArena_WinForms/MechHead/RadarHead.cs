@@ -15,7 +15,7 @@ namespace Mech
         {
             scaningDistance = 18;
             visionDistance = 8;
-           // pointCost = 3;
+            name = "Radar";
         }
 
         internal static int GetPointCost()

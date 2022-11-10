@@ -13,13 +13,12 @@ namespace Mech
         {
             armor = 5;
             maxHull = 500;
-            //pointCost = 10;
+            name = "Heavy armor";
         }
 
         internal static int GetPointCost()
         {
             return pointCost;
         }
-
     }
 }

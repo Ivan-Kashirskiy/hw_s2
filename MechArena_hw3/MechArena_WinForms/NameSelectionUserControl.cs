@@ -18,44 +18,42 @@ namespace MechArena_WinForms
             InitializeComponent();
         }
 
-        public void selectName()
-        {
-
-
-        }
-
-
-
         bool checkNames(string name1, string name2)
         {
             if (name1.Count() == 0)
             {
-                MainForm myParent = (MainForm)this.Parent.Parent;
+                MainForm1 myParent = (MainForm1)this.Parent.Parent;
                 myParent.showError("Enter first player name");
                 return false;
             }
 
             if (name2.Count() == 0)
             {
-                MainForm myParent = (MainForm)this.Parent.Parent;
+                MainForm1 myParent = (MainForm1)this.Parent.Parent;
                 myParent.showError("Enter second player name");
                 return false;
             }
 
             if (name1.Count() > 15)
             {
-                MainForm myParent = (MainForm)this.Parent.Parent;
+                MainForm1 myParent = (MainForm1)this.Parent.Parent;
                 myParent.showError("First player`s name is too lond");
                 return false;
             }
 
             if (name2.Count() > 15)
             {
-                MainForm myParent = (MainForm)this.Parent.Parent;
+                MainForm1 myParent = (MainForm1)this.Parent.Parent;
                 myParent.showError("Second player`s name is too lond");
                 return false;
             }
 
+            if (Equals(name1, name2))
+            {
+                MainForm1 myParent = (MainForm1)this.Parent.Parent;
+                myParent.showError("Names are the same");
+                return false;
+            }
 
             return true;
         }
@@ -63,8 +61,7 @@ namespace MechArena_WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainForm myParent = (MainForm)this.Parent.Parent;
-
+            MainForm1 myParent = (MainForm1)this.Parent.Parent;
 
             if (checkNames(textBox1.Text, textBox2.Text) )
                 myParent.selectNames(textBox1.Text, textBox2.Text);

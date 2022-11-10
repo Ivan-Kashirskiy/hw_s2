@@ -15,7 +15,7 @@ namespace Mech
             damage = 150;
             armorPenetration = 3;
             distance = 20;
-            //pointCost = 10;
+            name = "Mortar";
         }
 
         internal static int GetPointCost()

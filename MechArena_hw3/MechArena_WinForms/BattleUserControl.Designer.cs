@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             this.BattleTable = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.BattleLog = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TurnLabel = new System.Windows.Forms.Label();
-            this.PlayersName = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.EndTurn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.MechInfoTable = new System.Windows.Forms.TableLayoutPanel();
+            this.LegsLabel = new System.Windows.Forms.Label();
+            this.BodyLabel = new System.Windows.Forms.Label();
+            this.HeadLabel = new System.Windows.Forms.Label();
+            this.WeaponLabel = new System.Windows.Forms.Label();
+            this.ArmorPointsLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.l20 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.BattleTable.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.MechNameLabel = new System.Windows.Forms.Label();
+            this.OwnerLabel = new System.Windows.Forms.Label();
+            this.MechInfoTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // BattleTable
@@ -85,7 +87,6 @@
             this.BattleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.BattleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.BattleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.BattleTable.Controls.Add(this.groupBox1, 18, 13);
             this.BattleTable.Location = new System.Drawing.Point(0, 0);
             this.BattleTable.Margin = new System.Windows.Forms.Padding(0);
             this.BattleTable.MaximumSize = new System.Drawing.Size(480, 480);
@@ -125,22 +126,13 @@
             this.BattleTable.Size = new System.Drawing.Size(480, 480);
             this.BattleTable.TabIndex = 1;
             // 
-            // groupBox1
+            // BattleLog
             // 
-            this.groupBox1.Location = new System.Drawing.Point(291, 211);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(10, 10);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(686, 39);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(175, 424);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.BattleLog.Location = new System.Drawing.Point(686, 39);
+            this.BattleLog.Name = "BattleLog";
+            this.BattleLog.Size = new System.Drawing.Size(175, 424);
+            this.BattleLog.TabIndex = 2;
+            this.BattleLog.Text = "";
             // 
             // label1
             // 
@@ -156,38 +148,11 @@
             // 
             this.TurnLabel.AutoSize = true;
             this.TurnLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TurnLabel.Location = new System.Drawing.Point(103, 0);
+            this.TurnLabel.Location = new System.Drawing.Point(486, 390);
             this.TurnLabel.Name = "TurnLabel";
             this.TurnLabel.Size = new System.Drawing.Size(51, 25);
             this.TurnLabel.TabIndex = 4;
             this.TurnLabel.Text = "Turn";
-            // 
-            // PlayersName
-            // 
-            this.PlayersName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PlayersName.AutoSize = true;
-            this.PlayersName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PlayersName.Location = new System.Drawing.Point(97, 4);
-            this.PlayersName.Name = "PlayersName";
-            this.PlayersName.Size = new System.Drawing.Size(0, 25);
-            this.PlayersName.TabIndex = 5;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.TurnLabel, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.PlayersName, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(483, 378);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 34);
-            this.tableLayoutPanel1.TabIndex = 6;
             // 
             // EndTurn
             // 
@@ -213,116 +178,191 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 25);
+            this.label3.Size = new System.Drawing.Size(52, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "Name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(3, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 25);
+            this.label4.Size = new System.Drawing.Size(83, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Owner";
             // 
-            // tableLayoutPanel2
+            // MechInfoTable
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 5);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(492, 43);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 7;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(180, 280);
-            this.tableLayoutPanel2.TabIndex = 9;
+            this.MechInfoTable.ColumnCount = 2;
+            this.MechInfoTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.77778F));
+            this.MechInfoTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.22222F));
+            this.MechInfoTable.Controls.Add(this.LegsLabel, 1, 6);
+            this.MechInfoTable.Controls.Add(this.BodyLabel, 1, 5);
+            this.MechInfoTable.Controls.Add(this.HeadLabel, 1, 4);
+            this.MechInfoTable.Controls.Add(this.WeaponLabel, 1, 3);
+            this.MechInfoTable.Controls.Add(this.ArmorPointsLabel, 1, 2);
+            this.MechInfoTable.Controls.Add(this.label9, 0, 6);
+            this.MechInfoTable.Controls.Add(this.label3, 0, 0);
+            this.MechInfoTable.Controls.Add(this.label4, 0, 1);
+            this.MechInfoTable.Controls.Add(this.l20, 0, 2);
+            this.MechInfoTable.Controls.Add(this.label6, 0, 3);
+            this.MechInfoTable.Controls.Add(this.label7, 0, 4);
+            this.MechInfoTable.Controls.Add(this.label8, 0, 5);
+            this.MechInfoTable.Controls.Add(this.MechNameLabel, 1, 0);
+            this.MechInfoTable.Controls.Add(this.OwnerLabel, 1, 1);
+            this.MechInfoTable.Location = new System.Drawing.Point(492, 43);
+            this.MechInfoTable.Name = "MechInfoTable";
+            this.MechInfoTable.RowCount = 7;
+            this.MechInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.MechInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.MechInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.MechInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.MechInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.MechInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.MechInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.MechInfoTable.Size = new System.Drawing.Size(188, 277);
+            this.MechInfoTable.TabIndex = 9;
+            // 
+            // LegsLabel
+            // 
+            this.LegsLabel.AutoSize = true;
+            this.LegsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LegsLabel.Location = new System.Drawing.Point(92, 240);
+            this.LegsLabel.Name = "LegsLabel";
+            this.LegsLabel.Size = new System.Drawing.Size(61, 21);
+            this.LegsLabel.TabIndex = 17;
+            this.LegsLabel.Text = "label10";
+            // 
+            // BodyLabel
+            // 
+            this.BodyLabel.AutoSize = true;
+            this.BodyLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BodyLabel.Location = new System.Drawing.Point(92, 200);
+            this.BodyLabel.Name = "BodyLabel";
+            this.BodyLabel.Size = new System.Drawing.Size(61, 21);
+            this.BodyLabel.TabIndex = 16;
+            this.BodyLabel.Text = "label10";
+            // 
+            // HeadLabel
+            // 
+            this.HeadLabel.AutoSize = true;
+            this.HeadLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HeadLabel.Location = new System.Drawing.Point(92, 160);
+            this.HeadLabel.Name = "HeadLabel";
+            this.HeadLabel.Size = new System.Drawing.Size(61, 21);
+            this.HeadLabel.TabIndex = 15;
+            this.HeadLabel.Text = "label10";
+            // 
+            // WeaponLabel
+            // 
+            this.WeaponLabel.AutoSize = true;
+            this.WeaponLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WeaponLabel.Location = new System.Drawing.Point(92, 120);
+            this.WeaponLabel.Name = "WeaponLabel";
+            this.WeaponLabel.Size = new System.Drawing.Size(61, 21);
+            this.WeaponLabel.TabIndex = 14;
+            this.WeaponLabel.Text = "label10";
+            this.WeaponLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.WeaponLabel_Paint);
+            // 
+            // ArmorPointsLabel
+            // 
+            this.ArmorPointsLabel.AutoSize = true;
+            this.ArmorPointsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ArmorPointsLabel.Location = new System.Drawing.Point(92, 80);
+            this.ArmorPointsLabel.Name = "ArmorPointsLabel";
+            this.ArmorPointsLabel.Size = new System.Drawing.Size(61, 21);
+            this.ArmorPointsLabel.TabIndex = 13;
+            this.ArmorPointsLabel.Text = "label10";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.Location = new System.Drawing.Point(3, 240);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 25);
+            this.label9.Size = new System.Drawing.Size(42, 21);
             this.label9.TabIndex = 10;
             this.label9.Text = "Legs";
             // 
-            // label5
+            // l20
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(3, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 25);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Armor";
+            this.l20.AutoSize = true;
+            this.l20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l20.Location = new System.Drawing.Point(3, 80);
+            this.l20.Name = "l20";
+            this.l20.Size = new System.Drawing.Size(30, 21);
+            this.l20.TabIndex = 2;
+            this.l20.Text = "HP";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(3, 120);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 25);
+            this.label6.Size = new System.Drawing.Size(67, 21);
             this.label6.TabIndex = 3;
             this.label6.Text = "Weapon";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(3, 160);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 25);
+            this.label7.Size = new System.Drawing.Size(46, 21);
             this.label7.TabIndex = 4;
             this.label7.Text = "Head";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(3, 200);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 25);
+            this.label8.Size = new System.Drawing.Size(45, 21);
             this.label8.TabIndex = 5;
             this.label8.Text = "Body";
+            // 
+            // MechNameLabel
+            // 
+            this.MechNameLabel.AutoSize = true;
+            this.MechNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MechNameLabel.Location = new System.Drawing.Point(92, 0);
+            this.MechNameLabel.Name = "MechNameLabel";
+            this.MechNameLabel.Size = new System.Drawing.Size(61, 21);
+            this.MechNameLabel.TabIndex = 11;
+            this.MechNameLabel.Text = "label10";
+            // 
+            // OwnerLabel
+            // 
+            this.OwnerLabel.AutoSize = true;
+            this.OwnerLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OwnerLabel.Location = new System.Drawing.Point(92, 40);
+            this.OwnerLabel.Name = "OwnerLabel";
+            this.OwnerLabel.Size = new System.Drawing.Size(61, 21);
+            this.OwnerLabel.TabIndex = 12;
+            this.OwnerLabel.Text = "label10";
             // 
             // BattleUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.TurnLabel);
+            this.Controls.Add(this.MechInfoTable);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EndTurn);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.BattleLog);
             this.Controls.Add(this.BattleTable);
             this.Name = "BattleUserControl";
             this.Size = new System.Drawing.Size(864, 480);
-            this.BattleTable.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.Load += new System.EventHandler(this.BattleUserControl_Load);
+            this.MechInfoTable.ResumeLayout(false);
+            this.MechInfoTable.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,21 +370,25 @@
 
         #endregion
         private TableLayoutPanel BattleTable;
-        private RichTextBox richTextBox1;
+        private RichTextBox BattleLog;
         private Label label1;
         private Label TurnLabel;
-        private Label PlayersName;
-        private TableLayoutPanel tableLayoutPanel1;
         private Button EndTurn;
         private Label label2;
         private Label label3;
         private Label label4;
-        private TableLayoutPanel tableLayoutPanel2;
+        private TableLayoutPanel MechInfoTable;
         private Label label9;
-        private Label label5;
+        private Label l20;
         private Label label6;
         private Label label7;
         private Label label8;
-        private GroupBox groupBox1;
+        private Label LegsLabel;
+        private Label BodyLabel;
+        private Label HeadLabel;
+        private Label WeaponLabel;
+        private Label ArmorPointsLabel;
+        private Label MechNameLabel;
+        private Label OwnerLabel;
     }
 }

@@ -23,10 +23,36 @@ namespace Mech
         int Y;
 
         int cost = 0;
+        static int maxMovePoints = 50;
+
+        public void refreshMovePoints()
+        {
+            movePoints = maxMovePoints;
+        }
 
         public string getName()
         {
             return name;
+        }
+
+        public string getHeadName()
+        {
+            return head.getName();
+        }
+
+        public string getBodyName()
+        {
+            return body.getName();
+        }
+
+        public string getWeaponName()
+        {
+            return weapon.getName();
+        }
+
+        public string getLegsName()
+        {
+            return leg.getName();
         }
 
         public int getX()
@@ -55,12 +81,12 @@ namespace Mech
             return actionPointsCost;
         }
 
-        public int getCurHull()
+        public int getCurArmor()
         {
             return body.curHull;
         }
 
-        public int getMaxHull()
+        public int getMaxArmor()
         {
             return body.maxHull;
         }
@@ -102,13 +128,12 @@ namespace Mech
 
         internal int Cost()
         {
-
             return cost;
         }
 
-        protected int maxHull;
-        protected int curHull;
-        protected int armor;
+       // protected int maxHull;
+       // protected int curHull;
+       // protected int armor;
 
         bool isInRange(int x1, int x2, int a1, int a2)
         {
@@ -118,8 +143,7 @@ namespace Mech
             return false;
         }
 
-        
-        public bool move(int x, int y, GameMode.Field grid, int movePoints)
+        public bool can_move(int x, int y, GameMode.Field grid)
         {
             bool path_found = false;
             int fs = GameMode.Field.getFieldSize();
@@ -143,15 +167,42 @@ namespace Mech
             for (int i = yStart; i < yFinish; i++)
                 mp += 10 - getSpeedByTerrain(grid.field[x, i]);
 
-            if (mp <= movePoints)
-            {
+            return (mp <= getMovePoints());
+        }
+
+        public bool move(int x, int y, GameMode.Field grid)
+        {
+            bool path_found = false;
+            int fs = GameMode.Field.getFieldSize();
+
+            bool[,] visited = new bool[fs, fs];
+            for (int i = 0; i < fs; i++)
+                for (int j = 0; j < fs; j++)
+                    visited[i, j] = false;
+
+            int xStart = System.Math.Min(X, x);
+            int xFinish = System.Math.Max(X, x);
+
+            int yStart = System.Math.Min(Y, y);
+            int yFinish = System.Math.Max(Y, y);
+
+            int mp = 0;
+
+            for (int i = xStart; i < xFinish; i++)
+                mp += 10 - getSpeedByTerrain(grid.field[i, Y]);
+
+            for (int i = yStart; i < yFinish; i++)
+                mp += 10 - getSpeedByTerrain(grid.field[x, i]);
+
+            //if (mp <= getMovePoints())
+           // {
                 X = x;
                 Y = y;
 
                 movePoints = movePoints - mp;
                 return true;               
-            }
-            return false;
+           // }
+            //return false;
         }
 
         public int distToEnotherMech(Mech mech)
@@ -159,45 +210,46 @@ namespace Mech
             return (mech.X - X) * (mech.X - X) + (mech.Y - Y) * (mech.Y - Y);
         }
 
-
-        void attack(Mech enemy)
+        public bool canAttack(Mech mech)
         {
-            if (distToEnotherMech(enemy) > getWeaponRange() * getWeaponRange())
-                enemy.resiveDamage( getWeaponDamage() );
+            return (distToEnotherMech(mech) <= getWeaponRange() * getWeaponRange());
         }
 
 
-        public void scan(List<Mech> EmemyMech, List<Mech> visibleMech, List<Mech> detectedMech)
+        public void attack(Mech enemy)
+        {           
+            enemy.resiveDamage( getWeaponDamage() );
+        }
+
+
+        public void scan(List<Mech> ememyMech, List<Mech> visibleMech, List<Mech> detectedMech)
         {
 
-            foreach (Mech enemy in EmemyMech)
+            for (int i = 0; i < ememyMech.Count; i++)
             {
-                if (distToEnotherMech(enemy) <= getVisionDistance() * getVisionDistance())
-                    visibleMech.Add(enemy);
+                if (distToEnotherMech(ememyMech[i]) <= getVisionDistance() * getVisionDistance())
+                {
+                    if (detectedMech.Contains(ememyMech[i]) )
+                        detectedMech.Remove(ememyMech[i]);
+
+                    visibleMech.Add(ememyMech[i]);
+                }
                 else
                 {
-                    if (distToEnotherMech(enemy) <= getScaningDistance() * getScaningDistance())
-                        detectedMech.Add(enemy);
+                    if ( !visibleMech.Contains(ememyMech[i]) )
+                        if (distToEnotherMech(ememyMech[i]) <= getScaningDistance() * getScaningDistance())
+                          detectedMech.Add(ememyMech[i]);
                 }
-            };
+            }
         }
 
-
-        public void printMechInfo()
-        {
-            Console.WriteLine("MechInfo:");
-            Console.WriteLine("Head:  " + head.GetType());
-            Console.WriteLine("Body: " + body.GetType());
-            Console.WriteLine("Legs: " + leg.GetType());
-            Console.WriteLine("Weapon: " + weapon.GetType());
-        }
 
         public static Mech startMechConstraction(int HeadIndex, int BodyIndex, int WeaponIndex, int LegsIndex, string newName)
         {
             Mech newMech = new Mech();
             newMech.movePoints = 100;
             newMech.cost = 0;
-            newMech.name = newName;
+            newMech.name = newName;          
 
             switch (BodyIndex)
             {
@@ -254,11 +306,11 @@ namespace Mech
 
             switch (WeaponIndex)
             {
-                case 1:
+                case 0:
                     newMech.weapon = new Laser();
                     newMech.cost += Laser.GetPointCost();
                     break;
-                case 2:
+                case 1:
                     newMech.weapon = new AutoCanon();
                     newMech.cost += AutoCanon.GetPointCost();
                     break;
@@ -271,6 +323,8 @@ namespace Mech
                 break;
             }
 
+            newMech.body.curHull = newMech.body.maxHull;
+           
             return newMech;
         }
 

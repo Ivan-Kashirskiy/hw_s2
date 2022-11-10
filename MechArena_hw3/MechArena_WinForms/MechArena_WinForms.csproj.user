@@ -4,6 +4,9 @@
     <Compile Update="BattleUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="FinalScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="MechBuildingUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

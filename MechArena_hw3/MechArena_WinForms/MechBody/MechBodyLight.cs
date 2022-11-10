@@ -13,7 +13,7 @@ namespace Mech
         {
             armor = 1;
             maxHull = 300;
-            pointCost = 5;
+            name = "Light armor";
         }
 
         internal static int GetPointCost()

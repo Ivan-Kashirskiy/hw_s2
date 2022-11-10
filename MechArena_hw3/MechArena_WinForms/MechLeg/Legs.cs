@@ -14,9 +14,10 @@ namespace Mech
             speedOnGrass = 4;
             speedOnRock = 4;
             speedOnMud = 4;
-            speedOnForest = 3;
-            //pointCost = 5;
+            speedOnForest = 4;
+            name = "Legs";
         }
+
 
         internal static int GetPointCost()
         {

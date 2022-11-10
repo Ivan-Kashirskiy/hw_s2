@@ -15,7 +15,7 @@ namespace Mech
             damage = 100;
             armorPenetration = 5;
             distance = 8;
-            //pointCost = 5;
+            name = "Laser";
         }
         internal static int GetPointCost()
         {

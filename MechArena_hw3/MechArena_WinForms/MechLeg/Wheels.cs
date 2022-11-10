@@ -16,6 +16,7 @@ namespace Mech
             speedOnMud = 2;
             speedOnForest = 2;
             pointCost = 3;
+            name = "Wheels";
         }
 
         internal static int GetPointCost()
